@@ -4,7 +4,7 @@ var first = require('ee-first');
 module.exports = (function () {
 	'use strict';
 
-	function DNSCache (config) {
+	function DNSCache (config, callback) {
 		config = config || {};
 
 		this.expiration = config.expiration;
