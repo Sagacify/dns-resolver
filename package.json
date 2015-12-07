@@ -1,0 +1,32 @@
+{
+	"name": "dns-resolver",
+	"private": true,
+	"version": "0.0.1",
+	"description": "DNS resolution with optional Redis caching.",
+	"main": "src/index.js",
+	"engines": {
+		"node": "~4.0.0"
+	},
+	"scripts": {},
+	"dependencies": {
+		"underscore": "~1.8.3",
+		"async": "~1.5.0",
+
+		"ee-first":"~1.1.1",
+
+		"retry": "~0.8.0",
+
+		"redis": "~2.4.2",
+		"hiredis": "~0.4.1"
+	},
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Sagacify/dns-resolver"
+	},
+	"author": "Mickael van der Beek (https://github.com/Mickael-van-der-Beek)",
+	"bugs": {
+		"url": "https://github.com/Sagacify/dns-resolver/issues"
+	},
+	"homepage": "https://github.com/Sagacify/dns-resolver"
+}
