@@ -1,5 +1,6 @@
 var IDNSCache = require('./dns-cache/i-dns-cache');
 var IDNSCore = require('./dns-core/i-dns-core');
+var async = require('async');
 var net = require('net');
 
 module.exports = (function () {
