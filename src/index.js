@@ -80,7 +80,7 @@ module.exports = (function () {
 			callback(
 				null,
 				_.sample(addresses),
-				net.isIPv4(address) ? 4 : 6
+				net.isIPv4(addresses[0]) ? 4 : 6
 			);
 		});
 	};
