@@ -1,7 +1,7 @@
 {
 	"name": "dns-resolver",
 	"private": true,
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "DNS resolution with optional Redis caching.",
 	"main": "src/index.js",
 	"engines": {

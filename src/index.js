@@ -67,12 +67,8 @@ module.exports = (function () {
 
 			callback(
 				null,
-				addresses.map(function (address) {
-					return {
-						ip: address,
-						family: net.isIPv4(address) ? 4 : 6
-					};
-				})
+				addresses,
+				net.isIPv4(addresses[0]) ? 4 : 6
 			);
 		});
 	};
@@ -83,14 +79,10 @@ module.exports = (function () {
 				return callback(e);
 			}
 
-			var address = _.sample(addresses);
-
 			callback(
 				null,
-				{
-					ip: address,
-					family: net.isIPv4(address) ? 4 : 6
-				}
+				_.sample(addresses),
+				net.isIPv4(address) ? 4 : 6
 			);
 		});
 	};

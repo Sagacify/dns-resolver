@@ -9,10 +9,18 @@ module.exports = (function () {
 		this.dnsResolver = new DNSCore(config);
 	}
 
-	IDNSCore.prototype.resolve = function (hostname, callback) {
+	IDNSCore.prototype.resolve = function (hostname, options, callback) {
+		options = options || {};
+
 		if (typeof hostname !== 'string' || !hostname.length) {
 			return callback(
 				new Error('IDNSCore::resolve() - Type of `hostname` with value `' + hostname + '` is not `String`')
+			);
+		}
+
+		if (typeof options !== 'object') {
+			return callback(
+				new Error('IDNSCore::resolve() - Type of `options` with value `' + options + '` is not `Object`')
 			);
 		}
 
