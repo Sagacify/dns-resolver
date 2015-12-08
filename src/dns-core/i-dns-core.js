@@ -12,13 +12,13 @@ module.exports = (function () {
 	IDNSCore.prototype.resolve = function (hostname, callback) {
 		if (typeof hostname !== 'string' || !hostname.length) {
 			return callback(
-				new Error('IDNSCore::resolve() - Type of `' + hostname + '` is not `String`')
+				new Error('IDNSCore::resolve() - Type of `hostname` with value `' + hostname + '` is not `String`')
 			);
 		}
 
 		if (typeof callback !== 'function') {
 			return callback(
-				new Error('IDNSCore::resolve() - Type of `' + callback + '` is not `Function`')
+				new Error('IDNSCore::resolve() - Type of `callback` with value `' + callback + '` is not `Function`')
 			);
 		}
 
