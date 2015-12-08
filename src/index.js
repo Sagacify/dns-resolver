@@ -52,9 +52,6 @@ module.exports = (function () {
 				);
 			}
 
-			var randomAddress = this.addressRandomizer(addresses);
-			var family = net.isIPv4(randomAddress) ? 4 : 6;
-
 			callback(null, addresses);
 		}.bind(this));
 	};
